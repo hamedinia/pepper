@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> آموزش آشپزی فلفل </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/js/jqm/jquery.mobile-1.4.5.min.css"/>
+    <link rel="stylesheet" href="assets/js/jqm/rtl.jquery.mobile-1.4.0.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl/bootstrap-reboot.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="assets/css/bootstrap-rtl/bootstrap-rtl.min.css"/>
+    <link rel="stylesheet" href="assets/css/font-awesome/font-awesome.min.css"/>
+    <link rel="stylesheet" href="assets/css/style.css"/>
+
+</head>
+<body data-ng-app="appApplication" data-ng-controller="appCTRL" ng-cloak>
+<div data-role="page" id="mainPage" data-theme="a"><!--
+    <div data-role="header" data-position="fixed">
+        <h1> آموزش آشپزی فلفل </h1>
+    </div>-->
+
+    <div data-role="main" class="ui-content">
+        <div class="text-center">
+            <img src="assets/img/logo.png" class="logo"/>
+            <h1 class="logoName mb-5 "> آشپزی آسان با فلفل </h1>
+        </div>
+        <a class="btn btn-lg btn-danger btn-block my-4 py-3" data-role="none" href="#list">
+            <i class="fa fa-bars float-right text-white py-1"></i>فهرست غذاها </a>
+        <a class="btn btn-lg btn-danger btn-block my-4 py-3" data-role="none" href="#favorite">
+            <i class="fa fa-heart float-right text-white py-1"></i>علاقه مندی ها</a>
+        <a class="btn btn-lg btn-danger btn-block my-4 py-3" data-role="none" href="#about">
+            <i class="fa fa-certificate  float-right text-white py-1"></i>درباره ما</a>
+    </div>
+</div>
+<div data-role="page" id="list" data-theme="a">
+    <div data-role="header" data-position="fixed">
+        <h1> فهرست </h1>
+        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
+           data-rel="back"></a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div class="btn btn-secondary btn-block text-right my-3" data-ng-repeat="(key,item) in foodDATA.item"
+             data-ng-click="showContent(key)">
+            {{key+1}} - {{item.name}}
+        </div>
+    </div>
+</div>
+<div data-role="page" id="showContent" data-theme="a">
+    <div data-role="header" data-position="fixed">
+        <h1> {{currentContent.name}} </h1>
+        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
+           data-rel="back"></a>
+    </div>
+
+    <div data-role="main" class="ui-content text-right">
+        <div class="alert alert-danger" data-ng-click="changeFavorite()"
+        > افزودن به لیست علاقه مندی
+            <i data-ng-show="currentContent.favorite" class="fa fa-heart float-left"></i>
+            <i data-ng-show="!currentContent.favorite" class="fa fa-heart-o float-left"></i>
+        </div>
+        {{currentContent.shortDescription}}
+        <img class="figure-img img-fluid rounded" data-ng-src="assets/img/food/{{currentContent.images[0]}}"/>
+        <b class="text-danger"> مواد لازم : </b>
+        <span ng-bind-html="currentContent.ingredients"></span>
+        <img class="figure-img img-fluid rounded" data-ng-src="assets/img/food/{{currentContent.images[1]}}"/>
+        <b class="text-danger"> دستور پخت : </b>
+        <span ng-bind-html="currentContent.howTo"></span>
+    </div>
+</div>
+<div data-role="page" id="favorite" data-theme="a">
+    <div data-role="header" data-position="fixed">
+        <h1> علاقه مندی ها </h1>
+        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
+           data-rel="back"></a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <div data-role="main" class="ui-content">
+            <div class="btn btn-secondary btn-block text-right my-3" data-ng-repeat="(key,item) in foodDATA.item"
+                 data-ng-click="showContent(key)" data-ng-show="item.favorite">
+               {{item.name}}
+            </div>
+        </div>
+    </div>
+</div>
+<div data-role="page" id="setting" data-theme="a">
+    <div data-role="header" data-position="fixed">
+        <h1> تنظیمات </h1>
+        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
+           data-rel="back"></a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+    </div>
+</div>
+<div data-role="page" id="about" data-theme="a">
+    <div data-role="header" data-position="fixed">
+        <h1> درباره ما </h1>
+        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
+           data-rel="back"></a>
+    </div>
+
+    <div data-role="main" class="ui-content">
+
+    </div>
+</div>
+</body>
+<script src="assets/js/jquery/jquery.min.js"></script>
+<script src="assets/js/data.json" type="application/json"></script>
+<script src="assets/js/jqm/jquery.mobile-1.4.5.min.js"></script>
+<script src="assets/js/angular/angular.min.js"></script>
+<script src="assets/js/script.js"></script>
+</html>
