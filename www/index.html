@@ -42,10 +42,24 @@
     </div>
 
     <div data-role="main" class="ui-content">
-        <div class="btn btn-secondary btn-block text-right my-3" data-ng-repeat="(key,item) in foodDATA.item"
+        <div class="text-right mb-3" data-ng-repeat="(key,item) in foodDATA.item"
+             data-ng-click="showContent(key)">
+            <div class="row">
+                <div class="col-4">
+                    <img class="figure-img img-fluid rounded" data-ng-src="assets/img/food/{{item.images[0]}}"/>
+                </div>
+                <div class="col-8 text-right">
+                    <h5>{{item.name}}</h5>
+                    <p><small>{{item.shortDescription.substr(0,70)}} ...</small></p>
+                </div>
+            </div>
+
+
+        </div>
+        <!--<div class="btn btn-secondary btn-block text-right my-3" data-ng-repeat="(key,item) in foodDATA.item"
              data-ng-click="showContent(key)">
             {{key+1}} - {{item.name}}
-        </div>
+        </div>-->
     </div>
 </div>
 <div data-role="page" id="showContent" data-theme="a">
@@ -56,18 +70,21 @@
     </div>
 
     <div data-role="main" class="ui-content text-right">
-        <div class="alert alert-danger" data-ng-click="changeFavorite()"
-        > افزودن به لیست علاقه مندی
+        <div class="alert alert-danger" data-ng-click="changeFavorite()"> افزودن به لیست علاقه مندی
             <i data-ng-show="currentContent.favorite" class="fa fa-heart float-left"></i>
             <i data-ng-show="!currentContent.favorite" class="fa fa-heart-o float-left"></i>
         </div>
-        {{currentContent.shortDescription}}
-        <img class="figure-img img-fluid rounded" data-ng-src="assets/img/food/{{currentContent.images[0]}}"/>
-        <b class="text-danger"> مواد لازم : </b>
-        <span ng-bind-html="currentContent.ingredients"></span>
-        <img class="figure-img img-fluid rounded" data-ng-src="assets/img/food/{{currentContent.images[1]}}"/>
-        <b class="text-danger"> دستور پخت : </b>
-        <span ng-bind-html="currentContent.howTo"></span>
+        <div class="shortDescription text-justify"> {{currentContent.shortDescription}}</div>
+        <div class="text-center">
+            <img class="my-3 figure-img img-fluid rounded" data-ng-src="assets/img/food/{{currentContent.images[0]}}"/>
+        </div>
+        <div class="text-danger"> مواد لازم :</div>
+        <div class="ingredients clearfix" ng-bind-html="currentContent.ingredients"></div>
+        <div class="text-center">
+            <img class="my-3 figure-img img-fluid rounded" data-ng-src="assets/img/food/{{currentContent.images[1]}}"/>
+        </div>
+        <div class="text-danger mb-3"> دستور پخت :</div>
+        <div ng-bind-html="currentContent.howTo" class="text-justify"></div>
     </div>
 </div>
 <div data-role="page" id="favorite" data-theme="a">
@@ -81,22 +98,12 @@
         <div data-role="main" class="ui-content">
             <div class="btn btn-secondary btn-block text-right my-3" data-ng-repeat="(key,item) in foodDATA.item"
                  data-ng-click="showContent(key)" data-ng-show="item.favorite">
-               {{item.name}}
+                {{item.name}}
             </div>
         </div>
     </div>
 </div>
-<div data-role="page" id="setting" data-theme="a">
-    <div data-role="header" data-position="fixed">
-        <h1> تنظیمات </h1>
-        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
-           data-rel="back"></a>
-    </div>
 
-    <div data-role="main" class="ui-content">
-
-    </div>
-</div>
 <div data-role="page" id="about" data-theme="a">
     <div data-role="header" data-position="fixed">
         <h1> درباره ما </h1>
