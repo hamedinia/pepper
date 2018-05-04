@@ -735,7 +735,6 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
         $scope.foodDATA.item[index].howTo = $sce.trustAsHtml(item.howTo);
         $scope.foodDATA.item[index].favorite = ($scope.favoriteList.indexOf(item.ID) > -1);
     });
-    console.log($scope.foodDATA);
     $scope.afterReload();
     $scope.showContent = function (key) {
         $scope.currentContent = $scope.foodDATA.item[key];
@@ -748,7 +747,6 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
         else
             $scope.favoriteList.push($scope.currentContent.ID);
         storage.setItem('favoriteList', $scope.favoriteList);
-        console.log($scope.favoriteList);
         $scope.foodDATA.item.forEach(function (item, index) {
             if (item === $scope.currentContent)
                 $scope.foodDATA.item[index].favorite = !$scope.foodDATA.item[index].favorite;
