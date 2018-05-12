@@ -771,11 +771,9 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
         else currentPageID = window.location.hash.substr(1);
         if (currentPageID === "") {
             currentPageID = $("[data-role='page']").first().attr("ID")
-        } else if ($("#" + currentPageID).length <= 0) currentPageID = window.location.hash.substr(1);
-        if (currentPageID === "profilePage") {
-        }
-        $("#mainMenu .nav-item").removeClass("active");
-        $(".nav-item > a[href$='#" + currentPageID + "']").parent().addClass("active");
+        } else if ($("#" + currentPageID).length <= 0)
+            currentPageID = window.location.hash.substr(1);
+
         if ($("#loading").hasClass("d-none")) {
             $("#loading").removeClass("d-none");
             setTimeout(function () {
@@ -785,20 +783,6 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
         $scope.currentPageID = currentPageID;
         $("[data-role='page']").addClass("d-none");
         $("#" + currentPageID).removeClass("d-none");
-        switch (currentPageID) {
-            case"liveAll":
-            case"mainPage":
-            case"conventionAll":
-            case"reportAll":
-                $scope.sendRequest("Default_Page", '{"":""}');
-                break;
-            case"preContent":
-            case"contentPage":
-                if (!$scope.contentPageData) {
-                    if ($scope.urlParam("id") > 0) $scope.sendRequest("Content_Page", '{"ContentID":"' + $scope.urlParam("id") + '"}'); else window.location.href = "#mainPage"
-                }
-                break
-        }
     };
     $(window).on("hashchange", function () {
         navigate()
@@ -810,10 +794,6 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
         });
     });
 
-    $scope.navigate = function (targetID) {
-        $('.pageLayout').addClass('d-none');
-
-    };
     $scope.foodDATA = null;
     $scope.favoriteList = [];
     if (typeof Storage !== "undefined") {
@@ -837,7 +817,6 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
     $scope.showContent = function (key) {
         $scope.currentContent = $scope.foodDATA.item[key];
         window.location.href="#showContent"
-       /* $.mobile.changePage($("#showContent"), "none");*/
     };
 
     $scope.changeFavorite = function () {
