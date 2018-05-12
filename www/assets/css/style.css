@@ -44,7 +44,34 @@
 body {
     font-family: IRANSans, Tahoma, sans-serif;
 }
-
+.pageLayout{
+}
+.pageBody{
+    margin: 1rem;
+}
+.pageLayout header{
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: #eee;
+    padding: 0.5rem;
+    top: 0;
+    z-index: 2;
+    border-bottom: 2px solid #f00;
+}
+.pageLayout header h4{
+    float: right;
+    padding: 0.2rem;
+}
+.pageLayout header .fa{
+    font-size: 1.5rem;
+    color: #aaa;
+}
+.pageLayout header::after
+{
+    display: block;
+    clear: both;
+    content: "";
+}
 .btn-danger {
     color: #fff !important;
     font-weight: normal;

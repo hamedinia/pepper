@@ -16,32 +16,28 @@
 
 </head>
 <body data-ng-app="appApplication" data-ng-controller="appCTRL" ng-cloak>
-<div data-role="page" id="mainPage" data-theme="a"><!--
-    <div data-role="header" data-position="fixed">
-        <h1> آموزش آشپزی فلفل </h1>
-    </div>-->
-
-    <div data-role="main" class="ui-content">
-        <div class="text-center">
-            <img src="assets/img/logo.png" class="logo"/>
-            <h1 class="logoName mb-5 "> آشپزی آسان با فلفل </h1>
-        </div>
-        <a class="btn btn-lg btn-danger btn-block my-4 py-3" data-role="none" href="#list">
+<div class="pageLayout d-none" data-role="page" id="mainPage">
+    <div class="text-center">
+        <img src="assets/img/logo.png" class="logo"/>
+        <h1 class="logoName mb-5 "> آشپزی آسان با فلفل </h1>
+    </div>
+    <div class="pageBody">
+        <a class="btn btn-lg btn-danger btn-block my-4 py-3" href="#list">
             <i class="fa fa-bars float-right text-white py-1"></i>فهرست غذاها </a>
-        <a class="btn btn-lg btn-danger btn-block my-4 py-3" data-role="none" href="#favorite">
+        <a class="btn btn-lg btn-danger btn-block my-4 py-3" href="#favorite">
             <i class="fa fa-heart float-right text-white py-1"></i>علاقه مندی ها</a>
-        <a class="btn btn-lg btn-danger btn-block my-4 py-3" data-role="none" href="#about">
+        <a class="btn btn-lg btn-danger btn-block my-4 py-3" href="#about">
             <i class="fa fa-certificate  float-right text-white py-1"></i>درباره ما</a>
     </div>
 </div>
-<div data-role="page" id="list" data-theme="a">
-    <div data-role="header" data-position="fixed">
-        <h1> فهرست </h1>
-        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
-           data-rel="back"></a>
-    </div>
+<div class="pageLayout d-none" data-role="page" id="list">
+    <header>
+        <h4> فهرست </h4>
+        <div class="d-inline-block" data-role="back"><i class="fa fa-chevron-left m-2"></i></div>
+    </header>
 
-    <div data-role="main" class="ui-content">
+
+    <div class="pageBody">
         <div class="text-right mb-3" data-ng-repeat="(key,item) in foodDATA.item"
              data-ng-click="showContent(key)">
             <div class="row">
@@ -56,20 +52,15 @@
                 </div>
             </div>
         </div>
-        <!--<div class="btn btn-secondary btn-block text-right my-3" data-ng-repeat="(key,item) in foodDATA.item"
-             data-ng-click="showContent(key)">
-            {{key+1}} - {{item.name}}
-        </div>-->
     </div>
 </div>
-<div data-role="page" id="showContent" data-theme="a">
-    <div data-role="header" data-position="fixed">
-        <h1> {{currentContent.name}} </h1>
-        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
-           data-rel="back"></a>
-    </div>
+<div class="pageLayout d-none" data-role="page" id="showContent">
+    <header>
+        <h4> {{currentContent.name}} </h4>
+        <div class="d-inline-block" data-role="back"><i class="fa fa-chevron-left m-2 "></i></div>
+    </header>
 
-    <div data-role="main" class="ui-content text-right">
+    <div class="pageBody text-right">
         <div class="alert alert-danger" data-ng-click="changeFavorite()"> افزودن به لیست علاقه مندی
             <i data-ng-show="currentContent.favorite" class="fa fa-heart float-left"></i>
             <i data-ng-show="!currentContent.favorite" class="fa fa-heart-o float-left"></i>
@@ -87,14 +78,13 @@
         <div ng-bind-html="currentContent.howTo" class="text-justify"></div>
     </div>
 </div>
-<div data-role="page" id="favorite" data-theme="a">
-    <div data-role="header" data-position="fixed">
-        <h1> علاقه مندی ها </h1>
-        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
-           data-rel="back"></a>
-    </div>
+<div class="pageLayout d-none" data-role="page" id="favorite">
+    <header>
+        <h4> علاقه مندی ها </h4>
+        <div class="d-inline-block" data-role="back"><i class="fa fa-chevron-left m-2"></i></div>
+    </header>
 
-    <div data-role="main" class="ui-content">
+    <div class="pageBody">
         <div class="text-right alert alert-warning"> غذاهایی که دوست دارید با انتخاب قلب، در این لیست قرار بدهید.
         </div>
         <div class="text-right mb-3" data-ng-repeat="(key,item) in foodDATA.item"
@@ -114,14 +104,13 @@
     </div>
 </div>
 
-<div data-role="page" id="about" data-theme="a">
-    <div data-role="header" data-position="fixed">
-        <h1> درباره ما </h1>
-        <a href="#" class="ui-btn ui-icon-back ui-btn-left ui-btn-icon-notext ui-corner-all"
-           data-rel="back"></a>
-    </div>
+<div class="pageLayout d-none" data-role="page" id="about">
+    <header>
+        <h4> درباره ما </h4>
+        <div class="d-inline-block" data-role="back"><i class="fa fa-chevron-left m-2"></i></div>
+    </header>
 
-    <div data-role="main" class="ui-content">
+    <div class="pageBody">
         <p class="text-right mb-4"> این نرم افزار کاملا رایگان است . هرگونه پیشنهاد و انتقاد با کمال میل پذیرفته میشود
             .</p>
         <div class="text-center mt-4 pt-4"> آدرس اینترنتی طراح اپلیکیشن :
@@ -132,8 +121,6 @@
 </div>
 </body>
 <script src="assets/js/jquery/jquery.min.js"></script>
-<script src="assets/js/data.json" type="application/json"></script>
-<script src="assets/js/jqm/jquery.mobile-1.4.5.min.js"></script>
 <script src="assets/js/angular/angular.min.js"></script>
 <script src="assets/js/script.js"></script>
 </html>

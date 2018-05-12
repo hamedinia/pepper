@@ -629,18 +629,87 @@ var Data = {
             "همچنین می توانید کوفته هویج را بدون سبزی خرد شده نیز تهیه نمایید." +
             "<br>" +
             "امیدوارم از تهیه کوفته هویج لذت برده باشید."
-        }/*,
- {
-"ID":"8",
-"name":"",
-"shortDescription":"",
-"ingredients":"",
-"images": [
-"2-1.jpg",
-"2-2.jpg"
- ],
-"howTo":""
- }*/
+        },
+        {
+            "ID": "16",
+            "name": "اسکاچ مرغ با تخم بلدرچین",
+            "shortDescription": "اسکاچ مرغ با تخم بلدرچین یک غذای زیبا و شکیل است که به سرعت آماده می شود. اسکاچ مرغ اصالتا یک غذای انگلیسی است. اسکاچ انواع گوناگونی دارد. به جای مرغ، آن را می توان با سوسیس (۳۵۰ گرم) نیز تهیه کرد. همچنین اسکاچ مرغ را با تخم مرغ نیز می توان تهیه کرد. در ادامه با طرز تهیه اسکاچ مرغ با تخم بلدرچین آشنا خواهید شد.",
+            "ingredients": "<ul>" +
+            "<li>  گوشت مرغ چرخ شده  </li><li>  ۳۵۰ گرم  </li>" +
+            "<li>  تخم بلدرچین  </li><li> ۱۲ عدد </li>" +
+            "<li>  سیر له شده  </li><li>۳ حبه  </li>" +
+            "<li> پیاز </li><li>  ۲ عدد </li>" +
+            "<li>  سس خردل   </li><li> یک و نیم قاشق چایخوری </li>" +
+            "<li>  سس فلفل </li><li> یک و نیم قاشق چایخوری </li>" +
+            "<li>  نمک و فلفل سیاه  </li><li> به میزان لازم </li>" +
+            "<li> کنجد </li><li> مقداری </li>" +
+            "    </ul>",
+            "images": [
+                "16-1.jpg",
+                "16-2.jpg"
+            ],
+            "howTo": "<b class='text-danger'> گام اول: </b>" +
+            "ابتدا تخم های بلدرچین را آب پز کنید و پس از آن پوست آنها را جدا کنید." +
+            "<br>    " +
+            "<b class='text-danger'> گام دوم: </b>" +
+            "پیاز ها را رنده کنید و آب اضافی آن را بگیرید. سپس مرغ چرخ شده، سیر له شده، سس خردل، سس فلفل، نمک و فلفل سیاه را در ظرفی مناسب با پیازهای رنده شده مخلوط کنید." +
+            "<br>" +
+            "<b class='text-danger'> گام سوم: </b>" +
+            "۳ قاشق کنجد را به مخلوط اضافه کنید و هم بزنید." +
+            " <br>   " +
+            "<b class='text-danger'> گام چهارم: </b>" +
+            "مقداری به اندازه یک گردو از مخلوط بردارید و آن را به شکل کروی شکل دهید. سپس یک تخم بلدرچین را به آرامی داخل آن جای دهید و با مایه مرغ دور تخم بلدرچین را کاملا پر کنید." +
+            " <br>" +
+            "<b class='text-danger'> گام پنجم: </b>" +
+            "اسکاچ ها را درون تابه ای محتوی روغن داغ سرخ نمایید. اسکاچ مرغ شما آماده است. می توانید اسکاچ ها را با گلهایی از هویج تزيين کنید." +
+            " <br>" +
+            "امیدوارم از تهیه اسکاچ مرغ با تخم بلدچین لذت برده باشید."
+        },
+        {
+            "ID": "17",
+            "name": "فلافل لبنانی",
+            "shortDescription": "فلافل یکی از غذاهای بسیار معروف لبنان است. فلافل لبنانی در ایران و بخصوص در جنوب کشور از محبوبیت بالایی برخوردار است. تفاوت اصلی فلافل لبنانی با سایر فلافل ها استفاده از بلغور گندم در آن است. فلافل با سس ارده سرو می شود. در ادامه با طرز تهیه فلافل لبنانی آشنا خواهید شد. ",
+            "ingredients": "<ul>" +
+            "<li>  نخود  </li><li> یک و نیم پیمانه </li>" +
+            "<li>  پیاز درشت  </li><li>۱ عدد</li>" +
+            "<li>  سیر  </li><li>  ۳ یا ۴ حبه  </li>  " +
+            "<li> زیره سبز </li><li> یک دوم قاشق چایخوری</li>" +
+            "<li>  جعفری خرد شده   </li><li> یک چهارم پیمانه </li>" +
+            "<li> بلغور گندم </li><li> یک چهارم پیمانه </li>" +
+            "<li>  آرد نخود </li><li> یک چهارم پیمانه </li>" +
+            "<li> پودر تخم گشنیز </li><li> ۲ قاشق سوپ خوری </li>" +
+            "<li> نمک، فلفل و زردچوبه </li><li> یک دوم قاشق چایخوری </li>" +
+            "<li> آب  </li><li> یک چهارم پیمانه </li>" +
+            "<li> روغن سرخ کردنی </li><li> به میزان لازم </li>" +
+            "</ul>",
+            "images": [
+                "17-1.jpg",
+                "17-2.jpg"
+            ],
+            "howTo": "<b class='text-danger'> گام اول: </b>      " +
+            "نخود آبگوشتی را باید از ۲ روز قبل خیس کنید و طی این مدت چند مرتبه آب آن را عوض کنید. سپس نخود ها را باید درون صافی بریزید تا آب اضافی آن گرفته شود." +
+            "<br>    " +
+            "<b class='text-danger'> گام دوم: </b>      " +
+            "نخود ها را داخل دستگاه غذا ساز بریزید و کاملا آن را له کنید." +
+            "<br>" +
+            "<b class='text-danger'> گام سوم: </b>      " +
+            "پیاز و ۴ حبه سیر را درون دستگاه بریزید و کاملا له کنید." +
+            " <br>   " +
+            "<b class='text-danger'> گام چهارم: </b>      " +
+            "نمک،‌ فلفل، زرد چوبه، زیره، جعفری و پودر تخم گشنیز را نیز در این مرحله به مخلوط فلافل اضافه و مخلوط کنید." +
+            " <br>" +
+            "<b class='text-danger'> گام پنجم: </b>      " +
+            "بلغور گندم را که از ۴ ساعت قبل خیسانده شده را به مخلوط اضافه کنید. آرد نخود و مقداری آب را اضافه نموده و مجدد مخلوط را هم بزنید." +
+            " <br>" +
+            "<b class='text-danger'> گام ششم: </b>      " +
+            "قالب مخصوص فلافل را به روغن آغشته کنید. توسط یک قاشق مقداری از مواد فلافل را درون قالب بریزید و کمی فشار دهید. سپس تکه فلافل داخل قالب را به آرامی داخل تابه ای که روغن آن را قبلا کاملا حرارت داده و داغ شده است قرار دهید." +
+            " <br>" +
+            "<b class='text-danger'> گام هفتم: </b>      " +
+            "فلافل ها را پس از طلایی شدن از روغن خارج کنید و روغن اضافی آن را بگیرید. فلافل های لبنانی شما آماده شده است. فلافل ها را درون ظرفی زیبا با سس ارده سرو کنید." +
+            " <br>" +
+            "امیدورام از تهیه فلافل لبنانی لذت برده باشید."
+
+        }
     ]
 };
 
@@ -669,11 +738,7 @@ function setCookie(cname, cvalue, days) {
 
 function isPhoneNumber(inputTXT) {
     var phoneNo = /^(09)\d{9}$/;
-    if (inputTXT.match(phoneNo)) {
-        return true
-    } else {
-        return false
-    }
+    return inputTXT.match(phoneNo);
 }
 
 /*
@@ -697,9 +762,58 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
     /* $scope.playSound = function (state) {
     if (state === true) correctSound.play();
     else wrongSound.play()
-    };*/
-    /*$scope.functionData = jQuery.parseJSON(message);*/
+    };
+    $scope.functionData = jQuery.parseJSON(message);*/
+    var currentPageID = '';
+    navigate = function (targetID) {
+        if (targetID)
+            currentPageID = targetID;
+        else currentPageID = window.location.hash.substr(1);
+        if (currentPageID === "") {
+            currentPageID = $("[data-role='page']").first().attr("ID")
+        } else if ($("#" + currentPageID).length <= 0) currentPageID = window.location.hash.substr(1);
+        if (currentPageID === "profilePage") {
+        }
+        $("#mainMenu .nav-item").removeClass("active");
+        $(".nav-item > a[href$='#" + currentPageID + "']").parent().addClass("active");
+        if ($("#loading").hasClass("d-none")) {
+            $("#loading").removeClass("d-none");
+            setTimeout(function () {
+                $("#loading").addClass("d-none")
+            }, 150)
+        }
+        $scope.currentPageID = currentPageID;
+        $("[data-role='page']").addClass("d-none");
+        $("#" + currentPageID).removeClass("d-none");
+        switch (currentPageID) {
+            case"liveAll":
+            case"mainPage":
+            case"conventionAll":
+            case"reportAll":
+                $scope.sendRequest("Default_Page", '{"":""}');
+                break;
+            case"preContent":
+            case"contentPage":
+                if (!$scope.contentPageData) {
+                    if ($scope.urlParam("id") > 0) $scope.sendRequest("Content_Page", '{"ContentID":"' + $scope.urlParam("id") + '"}'); else window.location.href = "#mainPage"
+                }
+                break
+        }
+    };
+    $(window).on("hashchange", function () {
+        navigate()
+    });
+    $(function () {
+        navigate();
+        $("[data-role='back']").click(function () {
+            window.history.back();
+        });
+    });
 
+    $scope.navigate = function (targetID) {
+        $('.pageLayout').addClass('d-none');
+
+    };
     $scope.foodDATA = null;
     $scope.favoriteList = [];
     if (typeof Storage !== "undefined") {
@@ -722,7 +836,8 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
     $scope.afterReload();
     $scope.showContent = function (key) {
         $scope.currentContent = $scope.foodDATA.item[key];
-        $.mobile.changePage($("#showContent"), "none");
+        window.location.href="#showContent"
+       /* $.mobile.changePage($("#showContent"), "none");*/
     };
 
     $scope.changeFavorite = function () {
