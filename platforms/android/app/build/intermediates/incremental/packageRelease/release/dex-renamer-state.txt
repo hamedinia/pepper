@@ -1,0 +1,4 @@
+#Sun May 13 12:51:28 IRDT 2018
+base.0=C\:\\GitHub\\pepper\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+renamed.0=classes.dex
+file.0=C\:\\GitHub\\pepper\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0\\classes.dex

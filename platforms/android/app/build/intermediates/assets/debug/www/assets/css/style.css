@@ -46,19 +46,40 @@ body {
 }
 
 .btn-danger {
-    color: #fff!important;
+    color: #fff !important;
     font-weight: normal;
-    text-shadow: none!important;
+    text-shadow: none !important;
 }
-.logo{
+
+.logo {
     max-width: 50%;
 }
-.logoName{
+
+.logoName {
     font-size: 2em;
 }
-.ui-header .ui-title, .ui-footer .ui-title{
+
+.ui-header .ui-title, .ui-footer .ui-title {
     margin: 0 20%;
 }
-.fa-heart ,.fa-heart-o{
-   color: #f00;
+
+.fa-heart, .fa-heart-o {
+    color: #f00;
+}
+
+.ingredients ul {
+    list-style-type: none;
+    padding-right: .25rem;
+}
+
+.ingredients ul:first-child li:nth-child(odd) {
+    float: right;
+    color: black;
+    clear: right;
+}
+
+.ingredients ul:first-child li:nth-child(even) {
+    float: left;
+    color: red;
+    clear: left;
 }
