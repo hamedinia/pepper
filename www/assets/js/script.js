@@ -816,7 +816,9 @@ var app = angular.module("appApplication", []).controller("appCTRL", ["$scope", 
     $scope.afterReload();
     $scope.showContent = function (key) {
         $scope.currentContent = $scope.foodDATA.item[key];
-        window.location.href="#showContent"
+        window.location.href="#showContent";
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     };
 
     $scope.changeFavorite = function () {

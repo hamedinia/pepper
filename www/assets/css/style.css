@@ -44,12 +44,19 @@
 body {
     font-family: IRANSans, Tahoma, sans-serif;
 }
-.pageLayout{
+
+* {
+    direction: rtl;
 }
-.pageBody{
+
+.pageLayout {
+}
+
+.pageBody {
     margin: 1rem;
 }
-.pageLayout header{
+
+.pageLayout header {
     position: -webkit-sticky;
     position: sticky;
     background-color: #eee;
@@ -57,21 +64,28 @@ body {
     top: 0;
     z-index: 2;
     border-bottom: 2px solid #f00;
+    display: block;
 }
-.pageLayout header h4{
+
+.pageLayout header h4 {
     float: right;
-    padding: 0.2rem;
+    padding: 0.3rem 0;
+    width: calc(100% - 2.7rem);
+    text-align: right;
+    margin: 0;
 }
-.pageLayout header .fa{
+
+.pageLayout header .fa {
     font-size: 1.5rem;
     color: #aaa;
 }
-.pageLayout header::after
-{
+
+.pageLayout header::after {
     display: block;
     clear: both;
     content: "";
 }
+
 .btn-danger {
     color: #fff !important;
     font-weight: normal;
@@ -109,4 +123,33 @@ body {
     float: left;
     color: red;
     clear: left;
+}
+
+/* styles for '...' */
+.foodList .shortDescription{
+    overflow: hidden;
+    position: relative;
+    line-height: 1.4rem;
+    max-height: 2.8rem;
+    text-align: justify;
+    margin-left: -1rem;
+    padding-left: 1rem;
+    font-size: 80%;
+    color: #999;
+}
+/* create the ... */
+.foodList .shortDescription:before {
+    content: '...';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.foodList .shortDescription:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.2rem;
+    background: white;
 }
